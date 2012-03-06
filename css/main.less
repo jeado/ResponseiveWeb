@@ -1,0 +1,106 @@
+.main-navigation {
+   font-size: 0.8em;	
+   text-shadow: 0 1px 1px #fff;
+   ul, li, a {
+		float: left;
+   }
+   ul {
+		background: #eee;
+		border: 1px solid #ddd;
+		.border-radius();
+		.linear-gradient();
+   }
+   li {
+      position: relative;
+      border-right: 1px solid #ddd;
+   }
+   li:hover{
+   	a {
+   		.linear-gradient(#dfdfdf, #c0bebe, 100%);
+   	}
+   	.children {
+   		  background: #ffffff;
+   		  left: 3em;
+   		  margin-left: -65px;
+	      position: absolute;
+	      top: 30px;
+	      width: 130px;
+	      li, a {
+	         float: none;
+	      }
+	      li {
+	         border-right: none;
+	      }   
+      a {
+            background: none;
+         .border-radius(3px);
+         height: 30px;
+         line-height: 30px;
+         margin: 3px;
+      }
+      a:hover {
+         background: #dff2ff;
+      }
+    }
+   }
+   	.children {
+	      position: absolute;
+	      left: -999em;
+    }
+/*   .children {
+      left: -999em;
+      position: absolute;
+   }*/
+   
+   li:last-child {
+   	border-right: none;
+   }
+   a {
+   	height: 35px;
+   	line-height: 35px;
+   	margin: 3px;
+   	padding: 0 15px;
+   }
+}	
+
+.linear-gradient (@start: #fff, @end: #ddd, @percent: 100%) {
+   background: @start; /* Old */
+   background: -moz-linear-gradient(top,  @start 0%, @end @percent); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(@percent,@end)); /* Chrome, Safari 4+ */
+   background: -webkit-linear-gradient(top,  @start 0%,@end @percent); /* Chrome 10+, Safari 5.1+ */
+   background: -o-linear-gradient(top,  @start 0%,@end @percent); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  @start 0%,@end @percent); /* IE 10+ */
+   background: linear-gradient(top,  @start 0%,@end @percent); /* W3C */
+}
+
+.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.box-shadow (@x: 0, @y: 5px, @blur: 5px, @spread: -5px, @color: #000) {
+   -moz-box-shadow: @x @y @blur @spread @color;
+   -webkit-box-shadow: @x @y @blur @spread @color;
+   box-shadow: @x @y @blur @spread @color;
+}
+
+.cf:before,
+.cf:after {
+	content:"";
+	display:table;
+}
+.cf:after {
+	clear:both;
+}
+.cf {
+	zoom:1;
+}
+
+nav {
+	a {
+		color: inherit;
+		display: block;
+		text-decoration: none;
+	}
+}
